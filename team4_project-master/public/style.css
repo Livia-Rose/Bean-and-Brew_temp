@@ -1,0 +1,191 @@
+/* Reset image styles globally */
+img {
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    
+}
+/*body {
+    background-image: url("Cup Of Latte On Wooden Table Background, Coffee Picture Aesthetic, Coffee Powerpoint, Coffee Background Image And Wallpaper for Free Download.jpg"), 
+                      linear-gradient(to right, rgba(209, 182, 124, 0.847), rgba(119, 36, 4, 0.847));
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: white;
+    font-family: "Trade Winds", system-ui;
+    margin: 0;
+    height: 100vh;
+    
+}*/
+
+
+/*Background and Base Styles */
+body {
+    background-image: linear-gradient(to right, rgba(209, 182, 124, 0.847), rgba(119, 36, 4, 0.847));
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: rgb(235, 229, 187);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    height: 100vh;
+    font-family: "Trade Winds", system-ui;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between; /* Spread out logo and nav links */
+    padding: 10px 20px; 
+    border: 2px solid white;
+    margin-top: 5px;
+    border-radius: 10px;
+
+   /* background-color: #6a4a3a;*/
+}
+
+nav .logo-container {
+    display: flex;
+    align-items: center;
+}
+
+nav .logo-text {
+    font-size: 36px;
+    font-weight: bold;
+    color: #361609; /* Coffee brown color */
+    font-family: "Trade Winds", system-ui;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: flex-end; /* Aligns the nav items to the right */
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 28px;
+}
+
+/* Home Section */
+.home {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 50px;
+    text-align: left;
+    width: 100%;
+}
+
+.home-content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center; /* Align both image and text in the center */
+    padding: 20px;
+}
+
+/* Image on the Left */
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    mix-blend-mode: multiply;
+}
+
+.side-image {
+    max-width: 85%;
+    height: auto;
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Welcome Text on the Right */
+.welcome-text {
+    flex: 1;
+    text-align: left;
+    color: #361609;
+}
+
+.welcome-text h1 {
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+.desserts {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 50px;
+    text-align:left;
+    width: 100%;
+}
+
+.desserts-content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center; /* Align both image and text in the center */
+    padding: 20px;
+}
+
+/* Image on the Left */
+.image-container2 {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    mix-blend-mode: multiply;
+}
+
+.side-image {
+    max-width: 85%;
+    height: auto;
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Welcome Text on the Right */
+.about desserts {
+    flex: 1;
+    text-align: left;
+    color: #361609;
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+/* About Us Section */
+.about-us {
+    text-align: left;
+    padding-left: 40px;
+    padding-top: 20px;
+}
+
+.about-us h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.about-us p {
+    font-size: 18px;
+    line-height: 1.6;
+}
