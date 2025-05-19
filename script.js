@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Cart array to store items
+    
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-    // Menu items data
+   
     const menuItems = {
         'Hot Coffee': [
             { name: 'Espresso', price: 100 },
@@ -33,12 +33,12 @@ document.addEventListener('DOMContentLoaded', () => {
         ]
     };
 
-    // Function to update localStorage
+ 
     function updateLocalStorage() {
         localStorage.setItem('cart', JSON.stringify(cart));
     }
 
-    // Function to add item to cart
+    
     function addToCart(itemName, itemPrice) {
         const existingItem = cart.find(item => item.name === itemName);
         if (existingItem) {
@@ -50,14 +50,14 @@ document.addEventListener('DOMContentLoaded', () => {
         updateCartDisplay();
     }
 
-    // Function to clear cart
+
     function clearCart() {
         cart = [];
         updateLocalStorage();
         updateCartDisplay();
     }
 
-    // Function to update cart display
+ 
     function updateCartDisplay() {
         const cartContainer = document.querySelector('.cart-section');
         if (!cartContainer) return;
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Add event listeners to "Add to Cart" buttons
+
     document.querySelectorAll('.menu-category button').forEach(button => {
         button.addEventListener('click', () => {
             const itemElement = button.parentElement;
@@ -92,13 +92,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Add event listener to "Clear Cart" button
+    
     const clearCartButton = document.querySelector('.cart-section button');
     if (clearCartButton) {
         clearCartButton.addEventListener('click', clearCart);
     }
 
-    // Add event listener to "View Cart" button
+ 
     const viewCartButton = document.querySelector('.view-cart-button');
     if (viewCartButton) {
         viewCartButton.addEventListener('click', () => {
@@ -106,6 +106,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Update cart display on page load
+    
     updateCartDisplay();
 });
