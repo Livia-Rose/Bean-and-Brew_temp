@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bean and Brew Cafe Menu</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="menu-container">
+    <div class="logo-section">
+      <h1 class="cafe-title">Bean & Brew Cafe</h1>
+      <h2 class="menu-title">M &nbsp; E &nbsp; N &nbsp; U</h2>
+    </div>
+
+    <div class="menu-sections">
+
+      <div class="menu-category">
+        <h2>Hot Coffee</h2>
+        <ul>
+          <li>Espresso <span>₹100</span> <button onclick="addToCart('Espresso', 100)">Add to Cart</button></li>
+          <li>Black Coffee <span>₹90</span> <button onclick="addToCart('Black Coffee', 90)">Add to Cart</button></li>
+          <li>Café Latte <span>₹120</span> <button onclick="addToCart('Café Latte', 120)">Add to Cart</button></li>
+          <li>Cappuccino <span>₹130</span> <button onclick="addToCart('Cappuccino', 130)">Add to Cart</button></li>
+        </ul>
+      </div>
+
+      <div class="menu-category">
+        <h2>Cold Coffee</h2>
+        <ul>
+          <li>Cold Brew <span>₹140</span> <button onclick="addToCart('Cold Brew', 140)">Add to Cart</button></li>
+          <li>Frappe <span>₹160</span> <button onclick="addToCart('Frappe', 160)">Add to Cart</button></li>
+          <li>Iced Americano <span>₹110</span> <button onclick="addToCart('Iced Americano', 110)">Add to Cart</button></li>
+        </ul>
+      </div>
+
+      <div class="menu-category">
+        <h2>Tea</h2>
+        <ul>
+          <li>Masala Chai <span>₹70</span> <button onclick="addToCart('Masala Chai', 70)">Add to Cart</button></li>
+          <li>Green Tea <span>₹80</span> <button onclick="addToCart('Green Tea', 80)">Add to Cart</button></li>
+          <li>Ginger Tea <span>₹75</span> <button onclick="addToCart('Ginger Tea', 75)">Add to Cart</button></li>
+          <li>Cardamom Tea <span>₹85</span> <button onclick="addToCart('Cardamom Tea', 85)">Add to Cart</button></li>
+          <li>Tulsi Tea <span>₹90</span> <button onclick="addToCart('Tulsi Tea', 90)">Add to Cart</button></li>
+        </ul>
+      </div>
+
+      <div class="menu-category">
+        <h2>Desserts</h2>
+        <ul>
+          <li>Blueberry Cheesecake <span>₹160</span> <button onclick="addToCart('Blueberry Cheesecake', 160)">Add to Cart</button></li>
+          <li>Caramel Pudding <span>₹150</span> <button onclick="addToCart('Caramel Pudding', 150)">Add to Cart</button></li>
+          <li>Choco Lava Cake <span>₹170</span> <button onclick="addToCart('Choco Lava Cake', 170)">Add to Cart</button></li>
+          <li>Vanilla Ice Cream <span>₹120</span> <button onclick="addToCart('Vanilla Ice Cream', 120)">Add to Cart</button></li>
+          <li>Brownie Sundae <span>₹180</span> <button onclick="addToCart('Brownie Sundae', 180)">Add to Cart</button></li>
+          <li>Chocolate Mousse <span>₹160</span> <button onclick="addToCart('Chocolate Mousse', 160)">Add to Cart</button></li>
+          <li>Tiramisu <span>₹200</span> <button onclick="addToCart('Tiramisu', 200)">Add to Cart</button></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div style="text-align: center; margin-top: 2rem;">
+      <a href="cart2.html" class="view-cart-button">View Cart</a>
+    </div>
+  </div>
+
+  <script>
+    function addToCart(item, price) {
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart.push({ item, price });
+      localStorage.setItem("cart", JSON.stringify(cart));
+      alert(item + " added to cart!");
+    }
+  </script>
+
+</body>
+</html>

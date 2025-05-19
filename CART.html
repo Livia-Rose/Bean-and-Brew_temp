@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Cart</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <div class="menu-container">
+    <div class="logo-section">
+      <h1 class="cafe-title">Bean & Brew Cafe</h1>
+      <h2 class="menu-title">Y &nbsp; O &nbsp; U &nbsp; R &nbsp;&nbsp; C &nbsp; A &nbsp; R &nbsp; T</h2>
+    </div>
+
+    <div class="cart-section">
+      <div id="cartItems"></div>
+      <p id="subtotal"></p>
+      <p id="discount"></p>
+      <p id="gst"></p>
+      <h3 id="totalBill"></h3>
+      <button onclick="clearCart()">Clear Cart</button>
+    </div>
+  </div>
+
+  <script>
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let cartHtml = "";
+    let total = 0;
+
+    cart.forEach(item => {
+      if (item.item && item.price) {
+        cartHtml += <p>${item.item} - ₹${item.price}</p>;
+        total += item.price;
+      }
+    });
+
+    const discount = total * 0.10;
+    const discountedTotal = total - discount;
+    const gst = discountedTotal * 0.05;
+    const finalTotal = discountedTotal + gst;
+
+    document.getElementById("cartItems").innerHTML = cartHtml || "<p>No items in cart.</p>";
+    document.getElementById("subtotal").textContent = total ? Subtotal: ₹${total.toFixed(2)} : "";
+    document.getElementById("discount").textContent = total ? Discount (10%): -₹${discount.toFixed(2)} : "";
+    document.getElementById("gst").textContent = total ? GST (5%): ₹${gst.toFixed(2)} : "";
+    document.getElementById("totalBill").textContent = total ? Total: ₹${finalTotal.toFixed(2)} : "";
+
+    function clearCart() {
+      localStorage.removeItem("cart");
+      location.reload();
+    }
+  </script>
+
+</body>
+</html>
